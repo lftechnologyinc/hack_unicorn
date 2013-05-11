@@ -99,16 +99,22 @@
     <div class="container">
 
       <div class="masthead">
-        <h3 class="muted">Unicorn Innovations</h3>
+          
+        <h3 class="muted">Unicorn Ticketing Reservation System</h3>
+       
+         <button class="btn btn-info" type="button">LogIn</button>
+         <button class="btn btn-info" type="button">Register</button>
+        
+      
+          
         <div class="navbar">
           <div class="navbar-inner">
             <div class="container">
               <ul class="nav">
                 <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Downloads</a></li>
                 <li><a href="#">About</a></li>
+                <li><a href="#">VendorList</a></li>
+                <li><a href="#">Vehicle</a></li>
                 <li><a href="#">Contact</a></li>
               </ul>
             </div>
