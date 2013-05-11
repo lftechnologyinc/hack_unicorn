@@ -22,6 +22,9 @@ class base extends CI_Controller
 		redirect('base');
 	}
 
+public function register(){
+	$this->load->view('register_view');
+}
     public function login(){
     	$data = array();
 
