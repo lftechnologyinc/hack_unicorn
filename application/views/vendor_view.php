@@ -7,10 +7,15 @@ if($this->bitauth->logged_in())
 	}
 }
 ?>
+
+<style type="text/css">
+.row-fluid [class*="span"]:first-child {
+    margin-left: 0;
+    margin-top: 5px;
+}
+</style>
 <div class="row-fluid">
 		<div class="span12">
-
-
 <?php 
 	
 	if($vendor_list){?>
@@ -37,10 +42,10 @@ if($this->bitauth->logged_in())
 				      <td><?php echo $key['company']; ?></td>
 				      
 				      <td align="center">
-				           <a href="<?php echo site_url(array('vendor', 'edit')); ?>" class="btn btn-mini btn-warning"><i class="icon icon-pencil"><span>Edit</span></i></a>
+				           <a href="<?php echo site_url(array('vendor', 'edit')); ?>" class="btn btn-mini btn-warning">Edit</a>
 				           
 				           <a data-toggle="modal"  data-method ='delete' data-confirm = 'Are you sure to delete?' class='delete btn btn-mini btn-danger'  role="button" href="<?php echo site_url(array('vendor', 'delete'));?>">
-				           		<i class="icon-remove"><span>Delete</span></i>
+				           		Delete
 				           	</a>
 				      </td>       
 			    </tr>

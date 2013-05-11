@@ -1,3 +1,4 @@
+@charset "utf-8";
 /* 
     Document   : style
     Created on : May 10, 2013, 11:44:54 PM
@@ -5,13 +6,167 @@
     Description:
         Purpose of the stylesheet follows.
 */
-#login_side
+#login_leftside
 {
     float: right;
-    margin-top: 27px;
+/*    margin-top: 27px;*/
 }
 
 .content_center
 {
     text-align: center;
 }
+
+
+/* CSS Document */
+a{
+	color: rgba(204,0,0,1)
+}
+a:hover{ text-decoration:underline}
+#erp-wrap{
+	width:100%;
+	}
+#erp-body{
+	padding:0 20px;
+	}
+/*---------------
+Header Style
+---------------*/
+header{
+	padding:10px 0;
+	}
+header #logo{
+	margin-left:20px;
+	}
+header aside{
+	float:right;
+	margin-right:20px;
+	position:relative; top:45px;
+	}
+	header aside a{		
+		margin-left:10px;
+		text-decoration:none;
+		}
+		header aside a:hover{ text-decoration:underline}
+/*---------------
+Navigation Style
+---------------*/	
+nav.global{
+	width:100%;
+	margin-bottom:20px;
+	overflow:hidden;
+	position: relative;
+	background: rgba(204,0,0,1);
+	}
+	nav.global ul{
+		padding: 0 12px;
+		font-variant: small-caps;
+		}
+	nav.global ul li{
+		float:left;
+		font-size:12px;
+	}
+	nav.global ul li a{
+		padding:0 15px;
+		display:block;
+		cursor: pointer;
+		line-height:25px;
+		text-transform: capitalize;
+		color: rgba(255,255,255,1);
+		text-decoration:none;
+	}
+	nav.global ul li a:hover{ background:#f00}
+	nav.global ul li a.active{ font-weight:bold;}
+
+/*---------------
+Table Style
+---------------*/
+.datagrid-htable{
+	position:relative;
+	border:1px #99bbe8 solid;
+	padding:0 2px 2px 2px;
+	}
+.datagrid-body td {
+    border-bottom: 1px dotted #ccc;
+    border-right: 1px dotted #ccc;
+}
+
+.datagrid-header th {
+	text-align:left;
+    background: url("../images/titlebar/datagrid_header_bg.gif") repeat-x scroll left bottom #FAFAFA;
+    border-bottom: 1px solid #ccc;
+    border-right: 1px dotted #ccc;
+    border-top: 1px dotted #fff;
+}
+.datagrid-header th:last-child,.datagrid-body td:last-child{ border-right:0px;}
+.datagrid-header th,.datagrid-body td{
+	font-size: 12px; 
+	font-weight: normal;
+	line-height: 18px;
+    margin: 0;
+    overflow: hidden;
+	padding: 3px 4px;
+    white-space: nowrap;
+    word-wrap: normal;
+	}
+tr.datagrid-body:hover{
+	background:#d0e5f5;
+	}
+
+tr.datagrid-body:selected {
+    background: #FBEC88;
+}
+
+
+/*---------------
+Message Style
+---------------*/
+.icon-tip {background: url("../images/icons/tip.png") no-repeat scroll 0 0 transparent;}
+.erp-info {
+    background: none repeat scroll 0 0 rgba(254,248,208,1);
+    color: #8F5700;
+}
+.icon-ok {background: url("../images/icons/ok.png") no-repeat scroll 0 0 transparent;}
+.erp-ok {
+    background: none repeat scroll 0 0 rgba(208,251,215,1);
+    color: #000;
+}
+.icon-error {background: url("../images/icons/no.png") no-repeat scroll 0 0 transparent;}
+.erp-error {
+    background: none repeat scroll 0 0 rgba(255,215,216,1);
+    color: #000;
+}
+.erp-info,.erp-ok,.erp-error{
+	padding: 12px;
+	margin-bottom: 15px;
+	}
+.lf-tip,.lf-ok,.lf-error {
+    float: left;
+    height: 16px;
+    width: 24px;
+}
+
+/*---------------
+Footer Style
+---------------*/
+footer{ padding:10px 20px; border-top:1px #ccc solid; font-size:11px;
+}
+
+
+
+label.error{
+    
+    color: #EA5200;
+    padding-bottom: 2px;
+    padding-left: 16px;
+    display:inline;
+   }
+
+hr
+{
+    display: block;
+    color: #76CFEF;
+    background-color: #76CFEF;
+    height: 3px;
+}
+

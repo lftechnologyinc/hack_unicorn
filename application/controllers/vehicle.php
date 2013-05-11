@@ -4,15 +4,50 @@ class Vehicle extends CI_Controller
 {
     public function __construct() {
         parent::__construct();
+         $this->load->library('pagination');
     }
     
     public function index()
     { //echo "Entered here";die;
-        $this->load->view('vehicle_view');
+        
+           $config['uri_segment'] 	= 3;
+        $config['total_rows']   = 30;
+	$config['per_page'] =$data['per_page']	= $per_page = 5;
+        $data['page']   = $page = $this->uri->segment(3);
+       // $start = (!empty($page))?($per_page * ($page-1)):0 ;
+
+        $vehicle_list[0] = array( 
+            'company' => 'leapfrog'
+        );   
+        $vehicle_list[1] = array( 
+            'company' => 'Makalu'
+        );  
+        $vehicle_list[2] = array( 
+            'company' => 'Sajha'
+        );  
+        $vehicle_list[3] = array( 
+            'company' => 'Agni'
+        );  
+        $vehicle_list[4] = array( 
+            'company' => 'Tiger'
+        );  
+        $vehicle_list[5] = array( 
+            'company' => 'Sita'
+        );  
+        $data['vehicle_list'] = $vehicle_list;
+        
+	$config['total_rows']     = 30;		 
+	$config['base_url']       = base_url('vehicle/index');
+	$this->pagination->initialize($config);
+        
+        $this->load->view('vehicle_view', $data);
        // $this->add();
     }
     
     public function add(){
+        
+       
+        
         $this -> load -> view('vehicle_add');
        
     }
