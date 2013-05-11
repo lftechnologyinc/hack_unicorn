@@ -3,10 +3,9 @@
 
     <div class="container">
 <?php
-	echo '<div id="header">BitAuth Example: Login</div>';
-
+	echo '<div id="header">Login</div>';
 	echo form_open(current_url());
-	echo form_label('Username','username');
+	echo form_label('Email Id','username');
 	echo form_input('username');
 	echo form_label('Password','password');
 	echo form_password('password');
