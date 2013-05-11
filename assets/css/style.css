@@ -17,6 +17,9 @@
     text-align: center;
 }
 
+div.navBulletsWrapper{
+    padding-left : 159px;
+}
 
 /* CSS Document */
 a{
