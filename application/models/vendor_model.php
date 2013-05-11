@@ -5,4 +5,6 @@ class vendor_model extends CI_Model {
     {
         parent::__construct();
     }
+    
+    
 }
