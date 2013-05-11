@@ -1,5 +1,12 @@
-<?php $this -> load -> view("includes/header.php"); ?>
-<a class="btn  btn-primary btn-small pull-right customBtn fr" href="<?php echo base_url(array("vendor",'add'))?>">Add Vendor</a>
+<?php $this -> load -> view("includes/header.php"); 
+if($this->bitauth->logged_in())
+	{
+	if($this->bitauth->has_role('admin'))
+	{
+	    echo '<a class="btn  btn-primary btn-small pull-right customBtn fr" href="'.base_url(array("vendor",'add')).'">Add Vendor</a>';
+	}
+}
+?>
 
 <style type="text/css">
 .row-fluid [class*="span"]:first-child {
@@ -9,8 +16,6 @@
 </style>
 <div class="row-fluid">
 		<div class="span12">
-
-
 <?php 
 	
 	if($vendor_list){?>
