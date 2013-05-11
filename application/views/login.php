@@ -3,7 +3,7 @@
 
     <div class="container">
 <?php
-	echo '<div id="header">Login</div>';
+	
 	echo form_open(current_url());
 	echo form_label('Email','username');
 	echo form_input('username');
