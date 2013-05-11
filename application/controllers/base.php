@@ -12,6 +12,16 @@ class base extends CI_Controller
         $this->load->view('base_view');
     }
 
+    /**
+	 * Example::logout()
+	 *
+	 */
+	public function logout()
+	{
+		$this->bitauth->logout();
+		redirect('base');
+	}
+
     public function login(){
     	$data = array();
 
