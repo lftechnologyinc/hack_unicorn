@@ -113,7 +113,8 @@
               <ul class="nav">
                 <li class="active"><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
-                <li><a href="#">VendorList</a></li>
+                <li><a href="<?php echo base_url('vendor');?>">VendorList</a></li>
+                <li><a href="#">Services</a></li>
                 <li><a href="#">Vehicle</a></li>
                 <li><a href="#">Contact</a></li>
               </ul>
