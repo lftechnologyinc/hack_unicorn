@@ -20,24 +20,36 @@ class Vendor extends CI_Controller
         $data['page']   = $page = $this->uri->segment(3);
         $start = (!empty($page))?($per_page * ($page-1)):0 ;
 
-        $vendor_list[0] = array( 
-            'company' => 'leapfrog'
-        );   
-        $vendor_list[1] = array( 
-            'company' => 'Makalu'
-        );  
-        $vendor_list[2] = array( 
-            'company' => 'Sajha'
-        );  
-        $vendor_list[3] = array( 
-            'company' => 'Agni'
-        );  
-        $vendor_list[4] = array( 
-            'company' => 'Tiger'
-        );  
-        $vendor_list[5] = array( 
-            'company' => 'Sita'
-        );  
+        // $vendor_list[0] = array( 
+        //     'company' => 'leapfrog'
+        // );   
+        // $vendor_list[1] = array( 
+        //     'company' => 'Makalu'
+        // );  
+        // $vendor_list[2] = array( 
+        //     'company' => 'Sajha'
+        // );  
+        // $vendor_list[3] = array( 
+        //     'company' => 'Agni'
+        // );  
+        // $vendor_list[4] = array( 
+        //     'company' => 'Tiger'
+        // );  
+        // $vendor_list[5] = array( 
+        //     'company' => 'Sita'
+        // ); 
+        
+        $all_users = $this->bitauth->get_users();
+        $counter = 0;
+        foreach($all_users as $user)
+        {
+            if($this->bitauth->has_role('vendor', $user->roles)){
+                $vendor_list[$counter] = array('company'=>$user->fullname);
+                $counter++;
+            }
+        }
+            // echo $user->fullname.'<br/>';
+    
         $data['vendor_list'] = $vendor_list;
         
 	$config['total_rows']     = 30;		 
@@ -76,7 +88,7 @@ class Vendor extends CI_Controller
 		
             echo "<pre>";
             print_r($insert_data);die;
-					);
+					
            $this->vender_model->insert_entry($insert_data);
             //echo "<pre>";
             //print_r($insert_data);die;
@@ -102,11 +114,10 @@ class Vendor extends CI_Controller
             $this->form_validation->set_rules('username', 'Email Address', 'trim|required|bitauth_unique_username|valid_email');
             $this->form_validation->set_rules('c_name', 'Full Name', 'trim|required');
             $data['username'] = $this->input->post('username');
-            $data['email'] = $this->input->post('username');
             $data['password'] = 'iagree';
-            $data['fullname'] = $this->input->post('fullname');
-            $data['contact'] = $this->input->post('contact');
-            $data['address'] = $this->input->post('address');
+            $data['fullname'] = $this->input->post('c_name');
+            $data['contact_number'] = $this->input->post('contact');
+            $data['permanent_address'] = $this->input->post('address');
 
             if($this->form_validation->run() == TRUE)
             {

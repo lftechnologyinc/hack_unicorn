@@ -14,8 +14,8 @@
         <?php echo form_label('Contact Number *', 'contact'); ?>
         <?php echo form_input(array('name' => "contact")); ?>
         
-        <?php echo form_label('E-mail *', 'email'); ?>
-        <?php echo form_input(array('name' => "email")); ?>
+        <?php echo form_label('E-mail *', 'username'); ?>
+        <?php echo form_input(array('name' => "username")); ?>
 
         <?php echo form_label('Password *', 'password'); ?>
         <?php echo form_input(array('name' => "password")); ?>
