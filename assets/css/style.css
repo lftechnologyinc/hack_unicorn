@@ -15,3 +15,11 @@
 {
     text-align: center;
 }
+
+hr
+{
+    display: block;
+    color: #76CFEF;
+    background-color: #76CFEF;
+    height: 3px;
+}
