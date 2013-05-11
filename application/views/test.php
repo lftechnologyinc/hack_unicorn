@@ -1,8 +1,27 @@
 <?php include_once 'includes/header.php'; ?>
+<body>
 
-     <?php include_once 'includes/slider.php'; ?>
-      
-      <hr>
+    <div class="container">
+
+      <div class="masthead">
+        <h3 class="muted">Unicorn Innovations</h3>
+        <div class="navbar">
+          <div class="navbar-inner">
+            <div class="container">
+              <ul class="nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Downloads</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </div><!-- /.navbar -->
+      </div>
+
+   <?php include_once 'includes/slider.php'; ?> 
 
       <!-- Example row of columns -->
       <div class="row-fluid">
