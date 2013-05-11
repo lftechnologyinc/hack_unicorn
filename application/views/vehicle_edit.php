@@ -1,9 +1,9 @@
 <?php $this -> load -> view("includes/header.php"); ?>
 
 <?php echo form_open('vendor/update'); ?>
-    <div class="content_center">
+    
 
-	<legend>Add new Vehicle</legend>
+	<legend>Edit Vehicle</legend>
         
         <?php echo form_label('Vehicle Type *', 'v_type'); ?>
         <?php $options = array(
@@ -37,7 +37,7 @@
         
         
 	<?php echo form_submit(array('name' => 'vendor', 'value' => 'Save', 'class' => 'btn btn-primary customBtn')); ?>
-    <div>
+    
         
         
 

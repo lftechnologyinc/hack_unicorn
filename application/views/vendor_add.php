@@ -22,7 +22,7 @@
     <br>
         
 	<?php echo form_submit(array('name' => 'vendor', 'value' => 'Save', 'class' => 'btn btn-primary customBtn')); ?>
-</div>
+
         
         
 
