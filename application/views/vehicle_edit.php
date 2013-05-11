@@ -3,7 +3,7 @@
 <?php echo form_open('vendor/update'); ?>
     
 
-	<legend>Add new Vehicle</legend>
+	<legend>Edit Vehicle</legend>
         
         <?php echo form_label('Vehicle Type *', 'v_type'); ?>
         <?php $options = array(
