@@ -102,7 +102,7 @@
         <div class="row-fluid">
                 <?php 
                   if($this->bitauth->logged_in()){
-                    echo '<div class="span2">'.img('assets/images/logo.jpg').'</div>';
+                    echo '<div class="span2"><a href="base">'.img('assets/images/logo.jpg').'</a></div>';
                     echo '<div class="span9"><h3 class="muted">Unicorn Ticketing Reservation System</h3></div>';
                     echo '<div class="span1">';
                       echo anchor('base/logout', 'Logout');
@@ -111,12 +111,9 @@
                     else{
                       echo '<div class="span2">'.img('assets/images/logo.jpg').'</div>';
                       echo '<div class="span8"><h3 class="muted">Unicorn Ticketing Reservation System</h3></div>';
-                      echo '<div class="span3">';
-                      echo anchor('base/login', 'Login')."&nbsp"."|"; echo anchor('base/register', 'Register');
+                      echo '<div id="login_leftside">'.anchor('base/login', 'Login')."&nbsp"."|"; echo anchor('base/register', 'Register');
                       echo '</div>';
-//                      echo '<div class="span1">';
-//                      echo anchor('base/register', 'Register');
-//                      echo '</div>';
+//                    
                     }
                 ?>  
             

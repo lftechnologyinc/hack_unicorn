@@ -6,10 +6,10 @@
     Description:
         Purpose of the stylesheet follows.
 */
-#login_side
+#login_leftside
 {
     float: right;
-    margin-top: 27px;
+/*    margin-top: 27px;*/
 }
 
 .content_center
