@@ -4,11 +4,43 @@ class Vendor extends CI_Controller
 {
     public function __construct() {
         parent::__construct();
+         $this->load->library('pagination');
     }
     
     public function index()
     { //echo "Entered here";die;
-        $this->load->view('vendor_view');
+        
+        $config['uri_segment'] 	= 3;
+        $config['total_rows']   = 30;
+	$config['per_page'] =$data['per_page']	= $per_page = 5;
+        $data['page']   = $page = $this->uri->segment(3);
+        $start = (!empty($page))?($per_page * ($page-1)):0 ;
+
+        $vendor_list[0] = array( 
+            'company' => 'leapfrog'
+        );   
+        $vendor_list[1] = array( 
+            'company' => 'Makalu'
+        );  
+        $vendor_list[2] = array( 
+            'company' => 'Sajha'
+        );  
+        $vendor_list[3] = array( 
+            'company' => 'Agni'
+        );  
+        $vendor_list[4] = array( 
+            'company' => 'Tiger'
+        );  
+        $vendor_list[5] = array( 
+            'company' => 'Sita'
+        );  
+        $data['vendor_list'] = $vendor_list;
+        
+	$config['total_rows']     = 30;		 
+	$config['base_url']       = base_url('vendor/index');
+	$this->pagination->initialize($config); 
+        
+        $this->load->view('vendor_view',$data);
         //$this->add();
     }
     
