@@ -2,7 +2,7 @@
 
 
 <?php echo form_open('vendor/add'); ?>
-    <div class="content_center">
+    
         <legend>Add new Vendor</legend>
 
         <?php echo form_label('Company Name *', 'c_name'); ?>
@@ -22,7 +22,7 @@
     <br>
         
 	<?php echo form_submit(array('name' => 'vendor', 'value' => 'Save', 'class' => 'btn btn-primary customBtn')); ?>
-</div>
+
         
         
 

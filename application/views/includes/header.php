@@ -111,7 +111,7 @@
                     else{
                       echo '<div class="span2">'.img('assets/images/logo.jpg').'</div>';
                       echo '<div class="span8"><h3 class="muted">Unicorn Ticketing Reservation System</h3></div>';
-                      echo '<div id="login_leftside">'.anchor('base/login', 'Login')."&nbsp"."|"; echo anchor('base/register', 'Register');
+                      echo '<div id="login_leftside">'.anchor('base/login', 'Login')."&nbsp"."|"."&nbsp"; echo anchor('base/register', 'Register');
                       echo '</div>';
 //                    
                     }
@@ -126,10 +126,11 @@
               <ul class="nav">
                 <li><a href="<?php echo base_url();?>">Home</a></li>
                 <li><a href="#">About</a></li>
+                <li><a href="<?php echo base_url('about');?>">About</a></li>
                 <li><a href="<?php echo base_url('vendor');?>">Rental</a></li>
-                <li><a href="#">Services</a></li>
+                <li><a href="<?php echo base_url('services'); ?>">Services</a></li>
                 <li><a href="<?php echo base_url('vehicle');?>">Vehicle</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="<?php echo base_url('contact') ?>">Contact</a></li>
               </ul>
             </div>
           </div>
