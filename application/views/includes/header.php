@@ -104,7 +104,7 @@
           <div class="navbar-inner">
             <div class="container">
               <ul class="nav">
-                <li class="active"><a href="#">Home</a></li>
+                <li class="active"><a href="<?php echo base_url();?>">Home</a></li>
                 <li><a href="<?php echo base_url('vendor');?>">Projects</a></li>
                 <li><a href="#">Services</a></li>
                 <li><a href="#">Downloads</a></li>

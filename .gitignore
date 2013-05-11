@@ -1,2 +1,4 @@
 /nbproject/private/
 .DS_Store
+application/config/config.php
+application/config/database.php
