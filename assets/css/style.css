@@ -5,5 +5,8 @@
     Description:
         Purpose of the stylesheet follows.
 */
-
+#login_side
+{
+    float: right;
+}
 
