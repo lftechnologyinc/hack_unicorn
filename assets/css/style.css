@@ -161,3 +161,12 @@ label.error{
     padding-left: 16px;
     display:inline;
    }
+
+hr
+{
+    display: block;
+    color: #76CFEF;
+    background-color: #76CFEF;
+    height: 3px;
+}
+

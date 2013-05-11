@@ -23,6 +23,4 @@
         </div>
       </div>
 
-      <hr>
-
 <?php include_once 'includes/footer.php'; ?>    
