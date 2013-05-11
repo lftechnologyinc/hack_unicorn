@@ -3,6 +3,12 @@
 
 <a class="btn  btn-primary btn-small pull-right customBtn fr" href="<?php echo base_url(array("vehicle",'add'))?>">Add Vehicle</a>
 
+<style type="text/css">
+.row-fluid [class*="span"]:first-child {
+    margin-left: 0;
+    margin-top: 5px;
+}
+</style>
 
 <div class="row-fluid">
 		<div class="span12">
