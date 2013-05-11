@@ -25,7 +25,8 @@ if($this->bitauth->logged_in())
 		<div class="span12">
 <?php 
 	
-	if($vendor_list){?>
+	if(isset($vendor_list))
+		{?>
 		   <table width="100%" cellpadding="0" cellspacing="0" class="datagrid-htable" bordercolor="00FF00" >
 		     <tr class="datagrid-header">
                             <th width="20">S.N.</th>   
@@ -72,9 +73,11 @@ if($this->bitauth->logged_in())
 		     } ?>
 		  </table>
 	      <div class="pagination pagination-mini"><ul> <?php echo $this->pagination->create_links(); ?></ul></div>
-    <?php }else{ ?>
+    <?php }else{ 
+
+    	if(!isset($message) &&  !isset($error)){?>
     	<p class="alert">No record found</p>
-	<?php } ?>
+	<?php } }?>
 
                 </div>
 </div>
