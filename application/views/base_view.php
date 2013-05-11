@@ -7,7 +7,7 @@
       <!-- Example row of columns -->
       <div class="row-fluid">
         <div class="span4">
-          <h2>Vendor</h2>
+          <h2>Rental</h2>
           <p>Uniform Ticketing Reservation System is to satisfy the customers need</p>
           <p> <a href="#"><button class="btn btn-primary" type="button">Register</button></a></p>
         </div>
