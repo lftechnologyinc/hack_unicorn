@@ -1,6 +1,8 @@
 <?php $this -> load -> view("includes/header.php"); ?>
 
 <?php echo form_open('vendor/create'); ?>
+    <div class="content_center">
+
 	<legend>Add new Vehicle</legend>
         
         <?php echo form_label('Vehicle Type *', 'v_type'); ?>
@@ -31,11 +33,12 @@
                   '4' => 'Biratnagar',
                 );
                 echo form_dropdown('to', $options); ?>
-
+    <br>
+    
         
         
 	<?php echo form_submit(array('name' => 'vendor', 'value' => 'Save', 'class' => 'btn btn-primary customBtn')); ?>
-
+    </div>
         
         
 
