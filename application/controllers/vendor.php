@@ -8,8 +8,8 @@ class Vendor extends CI_Controller
     
     public function index()
     { //echo "Entered here";die;
-       // $this->load->view('vendor_add');
-        $this->add();
+        $this->load->view('vendor_view');
+        //$this->add();
     }
     
     public function add(){

@@ -117,7 +117,7 @@
                 <li><a href="#">About</a></li>
                 <li><a href="<?php echo base_url('vendor');?>">VendorList</a></li>
                 <li><a href="#">Services</a></li>
-                <li><a href="#">Vehicle</a></li>
+                <li><a href="<?php echo base_url('vehicle');?>">Vehicle</a></li>
                 <li><a href="#">Contact</a></li>
               </ul>
             </div>
