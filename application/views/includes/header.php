@@ -98,17 +98,31 @@
     <!-- Fav and touch icons -->
      </head>
      <body>
-
-
-<div class="container">
-       <div id="login_side">
-          <a href="#">LogIn   </a>
-          <a href="#">Register</a>
-       </div>    
-<h3 class="muted">Unicorn Ticketing Reservation System</h3>         
+      <div class="container">
+        <div class="row-fluid">
+                <?php 
+                  if($this->bitauth->logged_in()){
+                    echo '<div class="span2">'.img('assets/images/logo.jpg').'</div>';
+                    echo '<div class="span9"><h3 class="muted">Unicorn Ticketing Reservation System</h3></div>';
+                    echo '<div class="span1">';
+                      echo anchor('base/logout', 'Logout');
+                      echo '</div>';
+                    }
+                    else{
+                      echo '<div class="span2">'.img('assets/images/logo.jpg').'</div>';
+                      echo '<div class="span8"><h3 class="muted">Unicorn Ticketing Reservation System</h3></div>';
+                      echo '<div class="span1">';
+                      echo anchor('base/login', 'Login')."&nbsp&nbsp&nbsp";
+                      echo '</div>';
+                      echo '<div class="span1">';
+                      echo anchor('base/register', 'Register');
+                      echo '</div>';
+                    }
+                ?>  
+            
+          </div>
           
 <div class="masthead">
-
         <div class="navbar">
           <div class="navbar-inner">
             <div class="container">
