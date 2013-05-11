@@ -99,17 +99,16 @@
      </head>
      <body>
 
-    <div class="container">
 
-      <div class="masthead">
+<div class="container">
+       <div id="login_side">
+          <a href="#">LogIn   </a>
+          <a href="#">Register</a>
+       </div>    
+<h3 class="muted">Unicorn Ticketing Reservation System</h3>         
           
-          <table>
-              <tr>
-                  <td> <h3 class="muted">Unicorn Ticketing Reservation System</h3></td>
-                  <td style="margin-right:80px"><a href="#">LogIn  </a>
-                  <a href="#">Register</a></td>
-              </tr>
-          </table>
+<div class="masthead">
+
         <div class="navbar">
           <div class="navbar-inner">
             <div class="container">
