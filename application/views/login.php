@@ -5,7 +5,7 @@
 <?php
 	echo '<div id="header">Login</div>';
 	echo form_open(current_url());
-	echo form_label('Email Id','username');
+	echo form_label('Email','username');
 	echo form_input('username');
 	echo form_label('Password','password');
 	echo form_password('password');
@@ -15,10 +15,8 @@
 	echo form_close();
 
 	echo '<div id="bottom">';
-	echo '<span style="float: right;">'.anchor('base/register', 'Register').'</span>';
 	echo '</div>';
 
 ?>
 </div>
-</body>
-</html>
+<?php include_once 'includes/footer.php'; ?>    

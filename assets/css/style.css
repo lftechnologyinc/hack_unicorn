@@ -8,5 +8,10 @@
 #login_side
 {
     float: right;
+    margin-top: 27px;
 }
 
+.content_center
+{
+    text-align: center;
+}

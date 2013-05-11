@@ -98,10 +98,7 @@
     <!-- Fav and touch icons -->
      </head>
      <body>
-
-    <div class="container">
-
-      <div class="masthead">
+      <div class="container">
         <div class="row-fluid">
                 <?php 
                   if($this->bitauth->logged_in()){
@@ -124,6 +121,8 @@
                 ?>  
             
           </div>
+          
+<div class="masthead">
         <div class="navbar">
           <div class="navbar-inner">
             <div class="container">
@@ -132,7 +131,7 @@
                 <li><a href="#">About</a></li>
                 <li><a href="<?php echo base_url('vendor');?>">VendorList</a></li>
                 <li><a href="#">Services</a></li>
-                <li><a href="#">Vehicle</a></li>
+                <li><a href="<?php echo base_url('vehicle');?>">Vehicle</a></li>
                 <li><a href="#">Contact</a></li>
               </ul>
             </div>
