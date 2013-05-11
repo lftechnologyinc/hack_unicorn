@@ -10,10 +10,13 @@
 
     <!-- Le styles -->
     <link href="<?php echo base_url('assets');?>/css/bootstrap.css" rel="stylesheet">
+    <link href="<?php echo base_url('assets');?>/css/jquery-ui-1.8.22.custom.css" rel="stylesheet">
     <link href="<?php echo base_url('assets');?>/css/js-image-slider.css" rel="stylesheet" type="text/css" />
     <link href="<?php echo base_url('assets');?>/css/style.css" rel="stylesheet">
     
     <script src="<?php echo base_url('assets');?>/js/js-image-slider.js" type="text/javascript"></script>
+    <script src="<?php echo base_url('assets');?>/js/jquery-1.8.2.min.js" type="text/javascript"></script>
+    
     <style type="text/css">
       body {
         padding-top: 20px;
@@ -102,8 +105,8 @@
           
         <h3 class="muted">Unicorn Ticketing Reservation System</h3>
        
-         <button class="btn btn-info" type="button">LogIn</button>
-         <button class="btn btn-info" type="button">Register</button>
+         <a href="#">LogIn</a>
+         <a href="#">Register</a>
         
       
           
