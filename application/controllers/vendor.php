@@ -74,9 +74,9 @@ class Vendor extends CI_Controller
 					'email' => $this -> input -> post('email'),
                     'password'=> $this->input->post('password'));
 		
-            echo "<pre>";
-            print_r($insert_data);die;
-					);
+           // echo "<pre>";
+            //print_r($insert_data);die;
+					
            $this->vender_model->insert_entry($insert_data);
             //echo "<pre>";
             //print_r($insert_data);die;
@@ -151,8 +151,8 @@ class Vendor extends CI_Controller
 					'contact' => $this -> input -> post('contact'),
 					'email' => $this -> input -> post('email'),
 					);
-            echo "<pre>";
-            print_r($insert_data);die;
+           // echo "<pre>";
+           // print_r($insert_data);die;
         }
         
     }

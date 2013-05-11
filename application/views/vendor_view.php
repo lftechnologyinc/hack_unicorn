@@ -53,10 +53,15 @@ if($this->bitauth->logged_in())
 				      		if($this->bitauth->logged_in())
 							{
 							if($this->bitauth->has_role('admin'))
-							{
-								echo anchor('vendor/edit', 'Edit', array('class'=>'btn btn-mini btn-warning'));
-								echo anchor('vendor/delete', 'Delete', array('class'=>'delete btn btn-mini btn-danger', 'data-toggle'=>'modal', 'data-method' =>'delete', 'data-confirm' => 'Are you sure to delete?', 'role'=>'button'));
-							}
+							{?>
+<!--								echo anchor('vendor/edit', 'Edit', array('class'=>'btn btn-mini btn-warning'));
+								echo anchor('vendor/delete', 'Delete', array('class'=>'delete btn btn-mini btn-danger', 'data-toggle'=>'modal', 'data-method' =>'delete', 'data-confirm' => 'Are you sure to delete?', 'role'=>'button'));-->
+                                                               <a href="<?php echo site_url(array('vendor', 'edit')); ?>" class="btn btn-mini btn-warning">Edit</a>
+				           
+				           <a data-toggle="modal"  data-method ='delete' data-confirm = 'Are you sure to delete?' class='delete btn btn-mini btn-danger'  role="button" href="<?php echo site_url(array('vendor', 'delete'));?>">
+				           		Delete
+				           	</a>      
+	<?php	}
 						}
 				      	?>
 				           
