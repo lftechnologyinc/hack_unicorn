@@ -4,12 +4,12 @@ class Vendor extends CI_Controller
 {
     public function __construct() {
         parent::__construct();
-         $this->load->library('pagination');
+         $this->load->library(array('pagination', 'bitauth'));
     }
     
     public function index()
-    { //echo "Entered here";die;
-        
+    { 
+
         $config['uri_segment'] 	= 3;
         $config['total_rows']   = 30;
 	$config['per_page'] =$data['per_page']	= $per_page = 5;
