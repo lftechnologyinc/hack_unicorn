@@ -3,7 +3,7 @@
 <?php echo form_open('vendor/create'); ?>
     <div class="content_center">
 
-	<legend>Add new Vehicle</legend>
+	<legend>Add new Vehicle</legend> 
         
         <?php echo form_label('Vehicle Type *', 'v_type'); ?>
         <?php $options = array(
