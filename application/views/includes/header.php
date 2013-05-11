@@ -99,22 +99,21 @@
      </head>
      <body>
 
-    <div class="container">
 
-      <div class="masthead">
+<div class="container">
+       <div id="login_side">
+          <a href="#">LogIn   </a>
+          <a href="#">Register</a>
+       </div>    
+<h3 class="muted">Unicorn Ticketing Reservation System</h3>         
           
-          <table>
-              <tr>
-                  <td> <h3 class="muted">Unicorn Ticketing Reservation System</h3></td>
-                  <td style="margin-right:80px"><a href="#">LogIn  </a>
-                  <a href="#">Register</a></td>
-              </tr>
-          </table>
+<div class="masthead">
+
         <div class="navbar">
           <div class="navbar-inner">
             <div class="container">
               <ul class="nav">
-                <li class="active"><a href="#">Home</a></li>
+                <li class="active"><a href="<?php echo base_url();?>">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="<?php echo base_url('vendor');?>">VendorList</a></li>
                 <li><a href="#">Services</a></li>
