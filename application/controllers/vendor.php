@@ -5,6 +5,7 @@ class Vendor extends CI_Controller
     public function __construct() {
         parent::__construct();
          $this->load->library(array('pagination', 'bitauth'));
+         $this->load->model('vendor_model');
     }
     
     public function index()
@@ -57,8 +58,9 @@ class Vendor extends CI_Controller
 					'contact' => $this -> input -> post('contact'),
 					'email' => $this -> input -> post('email'),
 					);
-            echo "<pre>";
-            print_r($insert_data);die;
+           $this->vender_model->insert_entry($insert_data);
+            //echo "<pre>";
+            //print_r($insert_data);die;
         }
     }
 
