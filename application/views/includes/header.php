@@ -9,11 +9,11 @@
     <meta name="author" content="">
 
     <!-- Le styles -->
-    <link href="../assets/css/bootstrap.css" rel="stylesheet">
-    <link href="../assets/css/js-image-slider.css" rel="stylesheet" type="text/css" />
-    <link href="../assets/css/style.css" rel="stylesheet">
+    <link href="<?php echo base_url('assets');?>/css/bootstrap.css" rel="stylesheet">
+    <link href="<?php echo base_url('assets');?>/css/js-image-slider.css" rel="stylesheet" type="text/css" />
+    <link href="<?php echo base_url('assets');?>/css/style.css" rel="stylesheet">
     
-    <script src="../assets/js/js-image-slider.js" type="text/javascript"></script>
+    <script src="<?php echo base_url('assets');?>/js/js-image-slider.js" type="text/javascript"></script>
     <style type="text/css">
       body {
         padding-top: 20px;
@@ -85,7 +85,7 @@
         border-radius: 0 3px 3px 0;
       }
     </style>
-    <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="<?php echo base_url('assets');?>/css/bootstrap-responsive.css" rel="stylesheet">
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
