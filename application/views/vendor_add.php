@@ -1,8 +1,8 @@
 <?php $this -> load -> view("includes/header.php"); ?>
 
 
-<?php echo form_open('vendor/add'); ?>
-    
+<?php echo form_open('vendor/add_user'); ?>
+    <div class="content_center">
         <legend>Add new Vendor</legend>
 
         <?php echo form_label('Company Name *', 'c_name'); ?>
@@ -14,8 +14,8 @@
         <?php echo form_label('Contact Number *', 'contact'); ?>
         <?php echo form_input(array('name' => "contact")); ?>
         
-        <?php echo form_label('E-mail *', 'email'); ?>
-        <?php echo form_input(array('name' => "email")); ?>
+        <?php echo form_label('E-mail *', 'username'); ?>
+        <?php echo form_input(array('name' => "username")); ?>
 
         <?php echo form_label('Password *', 'password'); ?>
         <?php echo form_input(array('name' => "password")); ?>

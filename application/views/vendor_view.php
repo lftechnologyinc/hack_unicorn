@@ -1,4 +1,11 @@
 <?php $this -> load -> view("includes/header.php"); 
+if(isset($message)){
+	echo '<p>'.$message.'</p>';
+}
+if(isset($error)){
+	echo '<p>'.$error.'<p>';
+}
+
 if($this->bitauth->logged_in())
 	{
 	if($this->bitauth->has_role('admin'))
@@ -18,7 +25,8 @@ if($this->bitauth->logged_in())
 		<div class="span12">
 <?php 
 	
-	if($vendor_list){?>
+	if(isset($vendor_list))
+		{?>
 		   <table width="100%" cellpadding="0" cellspacing="0" class="datagrid-htable" bordercolor="00FF00" >
 		     <tr class="datagrid-header">
                             <th width="20">S.N.</th>   
@@ -42,11 +50,22 @@ if($this->bitauth->logged_in())
 				      <td><?php echo $key['company']; ?></td>
 				      
 				      <td align="center">
-				           <a href="<?php echo site_url(array('vendor', 'edit')); ?>" class="btn btn-mini btn-warning">Edit</a>
+				      	<?php 
+				      		if($this->bitauth->logged_in())
+							{
+							if($this->bitauth->has_role('admin'))
+							{?>
+<!--								echo anchor('vendor/edit', 'Edit', array('class'=>'btn btn-mini btn-warning'));
+								echo anchor('vendor/delete', 'Delete', array('class'=>'delete btn btn-mini btn-danger', 'data-toggle'=>'modal', 'data-method' =>'delete', 'data-confirm' => 'Are you sure to delete?', 'role'=>'button'));-->
+                                                               <a href="<?php echo site_url(array('vendor', 'edit')); ?>" class="btn btn-mini btn-warning">Edit</a>
 				           
 				           <a data-toggle="modal"  data-method ='delete' data-confirm = 'Are you sure to delete?' class='delete btn btn-mini btn-danger'  role="button" href="<?php echo site_url(array('vendor', 'delete'));?>">
 				           		Delete
-				           	</a>
+				           	</a>      
+	<?php	}
+						}
+				      	?>
+				           
 				      </td>       
 			    </tr>
 		    <?php
@@ -54,9 +73,11 @@ if($this->bitauth->logged_in())
 		     } ?>
 		  </table>
 	      <div class="pagination pagination-mini"><ul> <?php echo $this->pagination->create_links(); ?></ul></div>
-    <?php }else{ ?>
+    <?php }else{ 
+
+    	if(!isset($message) &&  !isset($error)){?>
     	<p class="alert">No record found</p>
-	<?php } ?>
+	<?php } }?>
 
                 </div>
 </div>
