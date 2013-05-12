@@ -101,6 +101,11 @@
       <div class="container">
         <div class="row-fluid">
                 <?php 
+                
+                $uri=$_SERVER['REQUEST_URI'];
+                $exp=  explode('/', $uri);
+                 
+                
                   if($this->bitauth->logged_in()){
                     echo '<div class="span2"><a href="base">'.img('assets/images/logo.jpg').'</a></div>';
                     echo '<div class="span9"><h3 class="muted">Unicorn Ticketing Reservation System</h3></div>';
@@ -124,12 +129,12 @@
           <div class="navbar-inner">
             <div class="container">
               <ul class="nav">
-                <li><a href="<?php echo base_url();?>">Home</a></li>
-                <li><a href="<?php echo base_url('about');?>">About</a></li>
-                <li><a href="<?php echo base_url('vendor');?>">Rental</a></li>
-                <li><a href="<?php echo base_url('services'); ?>">Services</a></li>
-                <li><a href="<?php echo base_url('vehicle');?>">Vehicle</a></li>
-                <li><a href="<?php echo base_url('contact') ?>">Contact</a></li>
+                <li class="<?php echo ($exp[2]=='')?'active':''?>"><a href="<?php echo base_url();?>" >Home</a></li>
+                <li class="<?php echo ($exp[2]=='about')?'active':''?>"><a href="<?php echo base_url('about');?>" >About</a></li>
+                <li class="<?php echo ($exp[2]=='vendor')?'active':''?>"><a href="<?php echo base_url('vendor');?>" >Rental</a></li>
+                <li class="<?php echo ($exp[2]=='services')?'active':''?>"><a href="<?php echo base_url('services'); ?>" >Services</a></li>
+                <li class="<?php echo ($exp[2]=='vehicle')?'active':''?>"><a href="<?php echo base_url('vehicle');?>" >Vehicle</a></li>
+                <li class="<?php echo ($exp[2]=='contact')?'active':''?>"><a href="<?php echo base_url('contact') ?>" >Contact</a></li>
               </ul>
             </div>
           </div>
